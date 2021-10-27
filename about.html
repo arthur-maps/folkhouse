@@ -71,6 +71,32 @@
   text-align: left;
 }
       
+      .subhero { 
+    position: relative; 
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("assets/images/bluehole2.png");
+    background-size: cover;
+}
+
+.subhero::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.0);
+    /*background-color: rgba(92, 89, 255, 0.4);*/
+}
+.hero-text {
+  position: relative;
+  text-align: left;
+}
+      
  main{     
 background-color: #f0ecfc;
 background-image: linear-gradient(315deg, #f9d1b7 0%, #f0ecfc 74%);
@@ -147,7 +173,7 @@ background-image: linear-gradient(315deg, #f9d1b7 0%, #f0ecfc 74%);
       </div>
       
       <div class="col-md-6">
-        <div class="h-100 p-5 bg-light border rounded-3">
+        <div class="h-100 p-5 bg-light border rounded-3 subhero">
           <h2>Haven for Artists</h2>
           <p>Mi ipsum faucibus vitae aliquet. Elementum sagittis vitae et leo duis ut diam. Turpis cursus in hac habitasse.</p>
           <button class="btn btn-outline-secondary" type="button">Create with Us</button>
