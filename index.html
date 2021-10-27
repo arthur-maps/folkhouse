@@ -46,7 +46,41 @@
        background-size: cover; /* Resize the background image to cover the entire container */
        text-shadow: 2px 2px 4px #000000;
       }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
+.hero { 
+  position: relative; 
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //background-image: url("assets/images/florida-ichetucknee-blue-hole.jpg");
+  //background-size: cover;
+  //opacity: 0.75;
+  
+  &::before {  
+      content: "";
+      background-image: url('https://placekitten.com/1200/800');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.75;
+  }
+}
+
+.hero-text {
+  position: relative;
+  color: #ffffff;  
+  font-size: 14rem;
+  line-height: 0.9;
+  text-align: center;
+}
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -98,10 +132,10 @@
         <header class="pb-3 mb-4">
     </header>
     
-    <div id="hero-image" class="p-5 mb-4 bg-dark rounded-3">
+    <div class="p-5 mb-4 bg-dark rounded-3 hero">
       <div class="container-fluid text-white py-5">
-        <h1 class="display-5 fw-bold">Riverside Folkhouse</h1>
-        <p class="col-md-8 fs-4">A magical riverside retreat at the confluence of the Santa Fe and Ichetucknee Rivers. Details and booking information coming soon! </p>
+        <h1 class="display-5 fw-bold hero-text">Riverside Folkhouse</h1>
+        <p class="col-md-8 fs-4 hero-text">A magical riverside retreat at the confluence of the Santa Fe and Ichetucknee Rivers. Details and booking information coming soon! </p>
         <button class="btn btn-outline-light" type="button">Example button</button>
       </div>
     </div>
