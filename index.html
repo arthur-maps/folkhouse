@@ -37,9 +37,13 @@
         -moz-user-select: none;
         user-select: none;
       }
-       
-      #banner {
-        background-image: url("assets/images/florida-ichetucknee-blue-hole.jpg");
+      
+      #hero-image {
+       background-image: url("assets/images/florida-ichetucknee-blue-hole.jpg"); /* The image used */
+       height: 500px; /* You must set a specified height */
+       background-position: center; /* Center the image */
+       background-repeat: no-repeat; /* Do not repeat the image */
+       background-size: cover; /* Resize the background image to cover the entire container */
       }
 
       @media (min-width: 768px) {
@@ -88,7 +92,7 @@
           <h1>.</sh1>
     </header>
     
-    <div id="banner" class="p-5 mb-4 bg-light rounded-3">
+    <div id="hero-image" class="p-5 mb-4 bg-light rounded-3">
       <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold">Custom jumbotron</h1>
         <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
